@@ -76,39 +76,7 @@ void FindTolstoi(Book* BM, int n)
 }
 
 //Считаем кол-во книг в файле данных
-int CountBooks()
-{
-	string str;
-	int n = 0;
 
-
-	ifstream file; //Входной поток
-	file.open("input.txt"); //Открыли файл с данными
-
-	//Пока файл не кончился
-	while (!file.eof())
-	{
-		getline(file, str);  //считываем строки по кол-ву строк, которые занимают данные по одной книге
-		getline(file, str);
-		getline(file, str);
-		getline(file, str);
-		getline(file, str);  // + считываем пробел после данных
-		n++;                 // счётчик книг +1
-	}
-
-	file.close();  //Закрыли файл
-
-	return n;    //вернуть подсчитанное кол-во книг
-}
-
-//Заполняем массив данными из файла
-void FillBooks(Book* BM, int n)
-{
-	int k = 0;
-	Book temp;  //Временная переменная-структура-книга
-
-	ifstream file;  //входной поток
-	file.open("input.txt"); //Открыли файл
 
 	//пока файл не кончится
 	while (!file.eof())
